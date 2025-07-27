@@ -14,7 +14,6 @@ const SumTotal = () => {
     if (value !== '' && !isNaN(value)) {
       const parsed = parseInt(value);
       setNumbers((prev) => [...prev, parsed]);
-      setInputValue(''); // Clear input after submission
     }
   };
 
