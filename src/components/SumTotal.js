@@ -37,7 +37,7 @@ const SumTotal = () => {
         onChange={handleChange}
         placeholder="Enter number"
       />
-      <p><strong>Current Sum:</strong> {sum}</p>
+      <p><strong>Sum:</strong> {sum}</p>
 
       
     </div>
