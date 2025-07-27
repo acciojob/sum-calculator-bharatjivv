@@ -22,7 +22,7 @@ const SumTotal = () => {
         onChange={(e) => setInputValue(e.target.value)}
       />
       <button onClick={handleAddNumber}>Add</button>
-      <p>Sum is: {sum}</p>
+      <p>Sum: {sum}</p>
       
     </div>
   );
