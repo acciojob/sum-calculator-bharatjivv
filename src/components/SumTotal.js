@@ -4,10 +4,12 @@ const SumTotal = () => {
   const [numbers, setNumbers] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  const handleAddNumber = () => {
-    if (inputValue.trim() !== "") {
-      // Convert to number before adding
-      setNumbers([...numbers, Number(inputValue)]);
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setInputValue(value);
+
+    if (value !== "") {
+      setNumbers([...numbers, Number(value)]);
       setInputValue("");
     }
   };
@@ -16,14 +18,8 @@ const SumTotal = () => {
 
   return (
     <div>
-      <input
-        type="number"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <button onClick={handleAddNumber}>Add</button>
+      <input type="number" value={inputValue} onChange={handleChange} />
       <p>Sum: {sum}</p>
-      
     </div>
   );
 };
